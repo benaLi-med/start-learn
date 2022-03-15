@@ -1,0 +1,27 @@
+
+	import java.io.*;
+	
+	public class DecToBin
+	{
+	public static void main(String[] args) throws IOException
+	{
+		int i;
+		args = new String [10];
+	BufferedReader br = new BufferedReader ( new InputStreamReader ( System.in));
+	for(i = 0; i < args.length; ++i)
+	
+	{
+	try {
+	System.out.println ( " enter args ["+i+"]");
+			 
+	args[i]= br.readLine();
+	
+	int n = Integer.parseInt(args[i]);
+	String s = Integer.toBinaryString(n);
+	System.out.println(args[i] + " (décimal) = " + s + " (en binaire)");
+	}
+	catch (NumberFormatException e ) {
+		System.out.print(" erruer "+e.getMessage());
+	}
+
+	}}}
